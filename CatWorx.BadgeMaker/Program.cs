@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker
 {
@@ -6,10 +6,15 @@ namespace CatWorx.BadgeMaker
   {
     static void Main(string[] args)
     {
-string stringNum = "2";
-int intNum = Convert.ToInt32(stringNum);
-Console.WriteLine(intNum);
-Console.WriteLine(intNum.GetType());
+List<string> employees = new List<string>() { "adam", "amy" };
+
+employees.Add("barbara");
+employees.Add("billy");
+employees.Add("Diego");
+for (int i = 0; i < employees.Count; i++) 
+{
+  Console.WriteLine(employees[i]);
+}
 }
   }
 }
