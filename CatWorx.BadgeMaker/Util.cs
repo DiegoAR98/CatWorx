@@ -24,6 +24,11 @@ if (!Directory.Exists("data"))
   // If not, create it
   Directory.CreateDirectory("data");
 }
-    }
+using (StreamWriter file = new StreamWriter("data/employees.csv"))
+{
+  // Any code that needs the StreamWriter would go in here
+    file.WriteLine("ID,Name,PhotoUrl");
+}
+   }
   }
 }
