@@ -39,7 +39,8 @@ int id = Int32.Parse(Console.ReadLine() ?? "");
   static void Main(string[] args)
   {
     List<Employee> employees = GetEmployees();
-Util.PrintEmployees(employees);  
+Util.PrintEmployees(employees);
+Util.MakeCSV(employees);
 }
 }
 }
