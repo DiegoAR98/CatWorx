@@ -41,6 +41,8 @@ int id = Int32.Parse(Console.ReadLine() ?? "");
     List<Employee> employees = GetEmployees();
 Util.PrintEmployees(employees);
 Util.MakeCSV(employees);
+  Util.MakeBadges(employees);
+
 }
 }
 }
