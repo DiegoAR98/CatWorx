@@ -51,6 +51,11 @@ int PHOTO_BOTTOM_Y = 517;
 
 int COMPANY_NAME_Y = 150;
 
+int EMPLOYEE_NAME_Y = 600;
+
+int EMPLOYEE_ID_Y = 730;
+
+
 using (HttpClient client = new HttpClient())
 {
   for (int i = 0; i < employees.Count; i++)
@@ -75,7 +80,15 @@ paint.Typeface = SKTypeface.FromFamilyName("Arial");
 
             // Draw company name
             canvas.DrawText(employees[i].GetCompanyName(), BADGE_WIDTH / 2f, COMPANY_NAME_Y, paint);
+paint.Color = SKColors.Black;
 
+// Employee name
+canvas.DrawText(employees[i].GetFullName(), BADGE_WIDTH / 2f, EMPLOYEE_NAME_Y, paint);
+
+paint.Typeface = SKTypeface.FromFamilyName("Courier New");
+
+// Employee ID
+canvas.DrawText(employees[i].GetId().ToString(), BADGE_WIDTH / 2f, EMPLOYEE_ID_Y, paint);
 
   SKImage finalImage = SKImage.FromBitmap(badge);
 SKData data = finalImage.Encode();
