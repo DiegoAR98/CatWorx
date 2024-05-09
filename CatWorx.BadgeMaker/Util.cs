@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
 using SkiaSharp;
+using System.Threading.Tasks;
 
 namespace CatWorx.BadgeMaker
 {
@@ -38,14 +39,13 @@ using (StreamWriter file = new StreamWriter("data/employees.csv"))
   }
 }
    }
-public static void MakeBadges(List<Employee> employees)
-{
-  // instance of HttpClient is disposed after code in the block has run
+async public static Task MakeBadges(List<Employee> employees) {
   using(HttpClient client = new HttpClient())
   {
-for (int i = 0; i < employees.Count; i++)
-  {
-  }
+    for (int i = 0; i < employees.Count; i++)
+    {
+
+    }
   }
 }
   }
