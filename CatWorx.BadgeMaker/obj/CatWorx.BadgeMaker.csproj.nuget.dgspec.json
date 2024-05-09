@@ -45,7 +45,7 @@
           "dependencies": {
             "SkiaSharp": {
               "target": "Package",
-              "version": "[2.88.0, )"
+              "version": "[2.88.3, )"
             }
           },
           "imports": [
